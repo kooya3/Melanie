@@ -8,15 +8,17 @@ const Form: React.FC<FormProps> = ({ allCountries, setFilteredCountries }) => {
     region: "all",
     name: "",
   });
-<<<<<<< HEAD
-  
+ 
   const handleSearch = () => {
     const inputValue = searchInput?.current?.value
       .trim()
       .toLocaleLowerCase() as string;
     setSearchState((prevState) => ({ ...prevState, name: inputValue }));
   };
-=======
->>>>>>> 27b541974081a74b347eb61b385f402cfc570323
+  
+  const filterByRegion = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSearchState((prevState) => ({ ...prevState, region: e.target.value }));
+  };
+
 
 export default Form
