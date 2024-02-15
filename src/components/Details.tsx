@@ -6,7 +6,6 @@ import { Icon } from "react-icons-kit";
 import { ReactNode } from "react";
 import { setTitle } from "../helpers/setTitle";
 
-
 const Details = ({ countries }: World): JSX.Element => {
   //filter country from DB
   let { countryDetails } = useParams();
@@ -24,7 +23,6 @@ const Details = ({ countries }: World): JSX.Element => {
           currencies.push(country.currencies[key].name)
         )
       : null;
-
   // //languages helper function
   const languages: Array<string> = [];
   const languagesObject =
@@ -34,7 +32,7 @@ const Details = ({ countries }: World): JSX.Element => {
         )
       : null;
 
-       // //borders helper function
+  // //borders helper function
   const borders: Array<string | null> = [];
   const bordersExtraction = country.borders?.map((border) =>
     countries.map((country) => {
@@ -56,7 +54,7 @@ const Details = ({ countries }: World): JSX.Element => {
           </button>
         </Link>
         <div className="grid grid-flow-row md:grid-flow-col md:gap-[4rem]">
-        <img
+          <img
             className="object-cover w-full h-auto rounded-md shadow-md max-w-[35rem]"
             src={country.flags.svg}
             alt={`${country.name.common} flag`}
