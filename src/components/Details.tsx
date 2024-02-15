@@ -13,3 +13,5 @@ const Details = ({ countries }: World): JSX.Element => {
   const country = countries.filter(
     (country) => country.name.common === countryDetails
   )[0];
+
+  setTitle(country.name.common, country.flags.png);
