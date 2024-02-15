@@ -81,3 +81,6 @@ const Details = ({ countries }: World): JSX.Element => {
                     country.population
                   )}
                 </li>
+                <li>
+                  <b>Region:</b> {country.region}
+                </li>
