@@ -67,3 +67,11 @@ const Details = ({ countries }: World): JSX.Element => {
             </h1>
             <div className="grid md:grid-cols-1 md:gap-[0rem] lg:grid-cols-2 lg:gap-[8rem] xl:gap-[10rem] text-lg ">
               <ul className="details">
+                <li>
+                  <b>Native Name: </b>
+                  {country.name.nativeName !== undefined
+                    ? country.name.nativeName?.[
+                        Object.keys(country.name.nativeName)[0]
+                      ].common
+                    : "-"}
+                </li>
