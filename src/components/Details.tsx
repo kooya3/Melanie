@@ -43,3 +43,14 @@ const Details = ({ countries }: World): JSX.Element => {
       }
     })
   );
+
+  return (
+    <>
+      <article className="grid gap-[5rem] pt-[5rem] px-[2rem] md:px-[4rem]s mx-auto mb-[4rem] max-w-[90rem]">
+        <Link to={`/where-in-the-world`}>
+          <button className="btn-navigate px-8 py-2 rounded-sm shadow-md font-semibold">
+            <div className="grid grid-cols-2 gap-2 text-lg">
+              <Icon icon={longArrowLeft} size={25} />
+              <p>Back</p>
+            </div>
+          </button>
