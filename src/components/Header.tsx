@@ -6,7 +6,11 @@ import { moonO } from "react-icons-kit/fa/moonO";
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
+const setTheme = (darkMode: DarkModeContext) => {
+  const isDark = darkMode.mode.isDark;
+  darkMode.dispatch(!isDark);
+};
+
   return (
     <div>Header</div>
   )
