@@ -1,4 +1,4 @@
-import React from 'react'
+import { Country } from "../templates/country";
 
 const Form = () => {
   return (
