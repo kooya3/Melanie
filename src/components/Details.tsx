@@ -61,3 +61,7 @@ const Details = ({ countries }: World): JSX.Element => {
             src={country.flags.svg}
             alt={`${country.name.common} flag`}
           />
+          <section className="lg:py-6 px-2">
+            <h1 className="md:text-5xl text-3xl font-extrabold mt-[3rem] mb-[1rem] md:mt-[0rem]">
+              {country.name.common}
+            </h1>
