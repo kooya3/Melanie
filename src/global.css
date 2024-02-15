@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  /*light mode */
+  --elements: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --shadow: hsl(0, 0%, 80%);
+  --scroll: hsl(0, 0%, 52%);
+}
+
+.dark {
+  --elements: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --shadow: hsl(0, 0%, 20%);
+   --scroll: hsl(0, 0%, 90%);
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+  width: 13px;
+} 
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--scroll)
+}
+
+ ::-webkit-scrollbar-track {
+  background-color: var(--elements);
+  box-shadow: 0 0 5px inset var(--shadow);
+}
+
+
+header {
+  background-color: var(--elements);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+input {
+  background-color: var(--elements);
+}
+select {
+  background-color: var(--elements);
+}
+
+.card{
+  background-color: var(--elements);
+  grid-template-rows: 1fr 1fr;
+}
+
+.cards{
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+:focus {
+  outline: 3px dashed rgb(81, 190, 236);
+  outline-offset: 4px;
+}
+
+.hide-focus :focus {
+  outline: none;
+}
+
+.show{
+  --tw-scale-x: 1;
+  --tw-scale-y: 1 ;
+    opacity: 1;
+}
+
+.btn-navigate{
+  background-color: var(--elements);
+}
+
+.details li{
+  padding-top: 1rem;
+}
