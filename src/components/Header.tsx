@@ -11,6 +11,15 @@ const setTheme = (darkMode: DarkModeContext) => {
   darkMode.dispatch(!isDark);
 };
 
+const Header = () => {
+  const theme = useContext(DarkModeContext);
+  const { isDark } = theme.mode;
+  return (
+    <header
+      className={
+        "z-10 shadow-md p-8 px-[2rem] md:px-[4rem] transition-colors items-center sticky"
+      }
+    >
   return (
     <div>Header</div>
   )
