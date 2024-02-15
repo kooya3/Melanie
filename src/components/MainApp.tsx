@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { CountriesProps } from "./Home";
 
 const MainApp = () => {
   return (
