@@ -8,7 +8,7 @@ const Form: React.FC<FormProps> = ({ allCountries, setFilteredCountries }) => {
     region: "all",
     name: "",
   });
- 
+
   const handleSearch = () => {
     const inputValue = searchInput?.current?.value
       .trim()
@@ -52,22 +52,19 @@ const Form: React.FC<FormProps> = ({ allCountries, setFilteredCountries }) => {
             name="region"
             onChange={filterByRegion}
           >
-          <option hidden>Filter by Region</option>
-          <option value="all">All</option>
-          <option value="americas">Americas</option>
-          <option value="africa">Africa</option>
-          <option value="asia">Asia</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
-          <option value="antarctic">Antarctic</option>
-        </select>
-      </div>
-    </form>
-  </>
-);
+            <option hidden>Filter by Region</option>
+            <option value="all">All</option>
+            <option value="americas">Americas</option>
+            <option value="africa">Africa</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+            <option value="antarctic">Antarctic</option>
+          </select>
+        </div>
+      </form>
+    </>
+  );
 };
 
 export default Form;
-
-
-export default Form
