@@ -88,3 +88,8 @@ const Details = ({ countries }: World): JSX.Element => {
                   <b>Subregion:</b>{" "}
                   {country.subregion ? country.subregion : "-"}
                 </li>
+              </ul>
+              <ul className="details">
+                <li>
+                  <b>Capital:</b> {country.capital ? country.capital : "-"}
+                </li>
