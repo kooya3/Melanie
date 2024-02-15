@@ -25,7 +25,6 @@ const Details = ({ countries }: World): JSX.Element => {
         )
       : null;
 
-
   // //languages helper function
   const languages: Array<string> = [];
   const languagesObject =
@@ -34,3 +33,6 @@ const Details = ({ countries }: World): JSX.Element => {
           languages.push(country.languages[key])
         )
       : null;
+
+       // //borders helper function
+  const borders: Array<string | null> = [];
