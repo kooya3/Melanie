@@ -21,4 +21,13 @@ const Header = () => {
       }
     >
 
+<Link to={`/where-in-the-world`}>
+        <h1 className="text-xl sm:text-2xl xl:text-[24px] tracking-[1px] font-extrabold w-[8rem] sm:w-auto">
+          Hi Melanie! Can We play Where in the World?
+        </h1>
+      </Link>
+      <button
+        className="flex gap-2 items-center"
+        onClick={() => setTheme(theme)}
+      >
 export default Header
