@@ -38,3 +38,8 @@ const Details = ({ countries }: World): JSX.Element => {
   const borders: Array<string | null> = [];
   const bordersExtraction = country.borders?.map((border) =>
     countries.map((country) => {
+      if (country.cca3 === border) {
+        borders.push(country.name.common);
+      }
+    })
+  );
