@@ -75,3 +75,9 @@ const Details = ({ countries }: World): JSX.Element => {
                       ].common
                     : "-"}
                 </li>
+                <li>
+                  <b>Population: </b>
+                  {new Intl.NumberFormat("de-DE", { useGrouping: true }).format(
+                    country.population
+                  )}
+                </li>
