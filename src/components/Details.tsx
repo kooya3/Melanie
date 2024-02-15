@@ -65,3 +65,5 @@ const Details = ({ countries }: World): JSX.Element => {
             <h1 className="md:text-5xl text-3xl font-extrabold mt-[3rem] mb-[1rem] md:mt-[0rem]">
               {country.name.common}
             </h1>
+            <div className="grid md:grid-cols-1 md:gap-[0rem] lg:grid-cols-2 lg:gap-[8rem] xl:gap-[10rem] text-lg ">
+              <ul className="details">
