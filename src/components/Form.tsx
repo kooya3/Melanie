@@ -33,5 +33,18 @@ const Form: React.FC<FormProps> = ({ allCountries, setFilteredCountries }) => {
     );
   }, [searchState.name, searchState.region]);
 
+  return (
+    <>
+      <form className="flex justify-between px-[2rem] md:px-[4rem] ] py-12 sm:flex-row flex-col gap-2">
+        <div className=" sm:w-[45%] sm:max-w-[30rem]">
+          <input
+            className="w-full shadow-md px-3 py-4 rounded-[5px] "
+            type="search"
+            name="country"
+            placeholder="Search for a country..."
+            onChange={handleSearch}
+            ref={searchInput}
+          />
+        </div>
 
 export default Form
