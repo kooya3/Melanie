@@ -56,3 +56,8 @@ const Details = ({ countries }: World): JSX.Element => {
           </button>
         </Link>
         <div className="grid grid-flow-row md:grid-flow-col md:gap-[4rem]">
+        <img
+            className="object-cover w-full h-auto rounded-md shadow-md max-w-[35rem]"
+            src={country.flags.svg}
+            alt={`${country.name.common} flag`}
+          />
