@@ -103,3 +103,26 @@ const Details = ({ countries }: World): JSX.Element => {
                 </li>
               </ul>
             </div>
+            <div className="pt-[3rem] text-lg">
+              <b>Border countries: &nbsp;</b>
+
+              {borders.length !== 0
+                ? borders.map((border) => {
+                    return (
+                      <Link to={`/${border}`} key={border}>
+                        <button className="btn-navigate px-4 py-2 rounded-sm shadow-md mr-3 mb-3 text-base">
+                          {border}
+                        </button>
+                      </Link>
+                    );
+                  })
+                : "-"}
+            </div>
+          </section>
+        </div>
+      </article>
+    </>
+  );
+};
+
+export default Details;
