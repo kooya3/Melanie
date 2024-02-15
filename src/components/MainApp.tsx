@@ -37,4 +37,32 @@ const Countries: React.FC<CountriesProps> = ({ countries, pages }) => {
           src={country.flags.svg}
           alt=""
         />
-export default MainApp
+        <article className="p-6 lg:py-7">
+          <h2 className="text-xl font-extrabold mb-2">{country.name.common}</h2>
+          <ul>
+            <li>
+              <b>Population: </b>
+              {new Intl.NumberFormat("de-DE", { useGrouping: true }).format(
+                country.population
+              )}
+            </li>
+            <li>
+              <b>Region:</b> {country.region}
+            </li>
+            <li>
+              <b>Capital:</b> {country.capital ? country.capital : "-"}
+            </li>
+          </ul>
+        </article>
+      </div>
+    </Link>
+  ));
+
+  return (
+    <>
+      <div className="cards grid gap-14 px-[2rem] md:px-[4rem] ">{cards}</div>
+    </>
+  );
+};
+
+export default Countries;
