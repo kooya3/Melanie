@@ -54,3 +54,5 @@ const Details = ({ countries }: World): JSX.Element => {
               <p>Back</p>
             </div>
           </button>
+        </Link>
+        <div className="grid grid-flow-row md:grid-flow-col md:gap-[4rem]">
