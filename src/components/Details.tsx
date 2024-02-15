@@ -24,3 +24,13 @@ const Details = ({ countries }: World): JSX.Element => {
           currencies.push(country.currencies[key].name)
         )
       : null;
+
+
+  // //languages helper function
+  const languages: Array<string> = [];
+  const languagesObject =
+    country.languages !== undefined
+      ? Object.keys(country.languages)?.map((key) =>
+          languages.push(country.languages[key])
+        )
+      : null;
