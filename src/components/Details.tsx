@@ -15,3 +15,12 @@ const Details = ({ countries }: World): JSX.Element => {
   )[0];
 
   setTitle(country.name.common, country.flags.png);
+
+  //currencies helper function
+  const currencies: Array<string> = [];
+  const currenciesObject =
+    country.currencies !== undefined
+      ? Object.keys(country.currencies).map((key) =>
+          currencies.push(country.currencies[key].name)
+        )
+      : null;
