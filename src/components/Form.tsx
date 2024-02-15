@@ -46,5 +46,11 @@ const Form: React.FC<FormProps> = ({ allCountries, setFilteredCountries }) => {
             ref={searchInput}
           />
         </div>
+        <div className="sm:w-[25%] sm:max-w-[15rem]">
+          <select
+            className="w-full shadow-md px-3 py-4 rounded-[5px] border-r-[12px] border-r-transparent"
+            name="region"
+            onChange={filterByRegion}
+          >
 
 export default Form
