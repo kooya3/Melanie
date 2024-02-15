@@ -16,4 +16,20 @@ const Countries: React.FC<CountriesProps> = ({ countries, pages }) => {
           .forEach((card) => observer.observe(card));
       }, [pages, countries]);
     
+      let observer = new IntersectionObserver(
+        (cards) => {
+          cards.forEach((card) => {
+            if (card.isIntersecting) card.target.classList.add("show");
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      const cards = countries.slice(0, pages).map((country, index) => (
+        <Link to={`/${country.name.common}`} key={country.cca3}>
+          <div
+            tabIndex={0}
+            className=" card grid rounded-md shadow-md max-w-sm mx-auto w-full h-full overflow-hidden cursor-pointer transition hover:!scale-105 hover:shadow-xl scale-75 opacity-40 transition-all"
+            key={country.name.common}
+          >
 export default MainApp
