@@ -32,4 +32,9 @@ const Countries: React.FC<CountriesProps> = ({ countries, pages }) => {
             className=" card grid rounded-md shadow-md max-w-sm mx-auto w-full h-full overflow-hidden cursor-pointer transition hover:!scale-105 hover:shadow-xl scale-75 opacity-40 transition-all"
             key={country.name.common}
           >
+            <img
+          className="object-cover w-full h-full max-h-[12rem]"
+          src={country.flags.svg}
+          alt=""
+        />
 export default MainApp
