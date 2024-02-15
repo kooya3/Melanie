@@ -53,12 +53,12 @@ const MainApp = (): JSX.Element => {
 
   return (
     <div className="grid grid-rows-[auto_auto_1fr]">
-      <BrowserRouter>
+      <BrowserRouter basename="/where-in-the-world">
         <Header />
         <main>
           <Routes>
             <Route
-              path="/where-in-the-world"
+              path="/"
               element={
                 <Home
                   loading={loading}
@@ -77,6 +77,7 @@ const MainApp = (): JSX.Element => {
           </Routes>
         </main>
       </BrowserRouter>
+
     </div>
   );
 };
