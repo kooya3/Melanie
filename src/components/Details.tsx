@@ -97,3 +97,9 @@ const Details = ({ countries }: World): JSX.Element => {
                   <b>Currencies: </b>
                   {currencies.length !== 0 ? currencies.join(", ") : "-"}
                 </li>
+                <li>
+                  <b>Languages: </b>
+                  {languages.length !== 0 ? languages.join(", ") : "-"}
+                </li>
+              </ul>
+            </div>
